@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+$g-body-background-color: #fff;
+$g-text-color: #656c7c;
+$g-font-family: Inter, sans-serif;
+$g-font-size: 1rem;
+$g-line-height: 1.5;
+
+$g-black : #000000;
+
+html {
+  @media screen and (min-width: 768px) and (max-width:1400px) {
+    font-size:15px;
+  }
+  @media screen and (min-width:1600px) {
+    font-size:18px;
+  }
+  @media screen and (min-width:1700px) {
+    font-size:17px;
+  }
+
+  @media screen and (min-width:1800px) {
+    font-size:18px;
+  }
+}
+body {
+  background-color: $g-body-background-color;
+  color: $g-text-color;
+  font-family: $g-font-family;
+  font-size: $g-font-size;
+  line-height: $g-line-height;
+  padding:0;
+  margin:0;
+
+}
+.container {
+  margin-top: 6.06rem;
+  margin-bottom: 6.12rem;
+  text-align: center;
+  padding:0 9.75rem;
+
+  @media screen and (max-width: 991px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 991px) and (max-width: 1250px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.43rem;
+    color: $g-black;
+    width:fit-content;
+    margin:auto;
+    padding:0;
+  }
+
+  h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.18rem;
+    width: fit-content;
+    margin: 1rem auto auto;
+  }
+  @media screen and (max-width: 991px){
+    h1,h4 {
+      width:100%;
+      text-align: center;
+    }
+  }
+
+  .card-container {
+    margin-top: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 991px){
+      width: 100%;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 991px) and (max-width: 1250px) {
+      justify-content: space-around;
+    }
+    .card {
+      display:flex;
+      flex-direction:column;
+      width: 22.5rem;
+      height: 42.68rem; 
+      background: #ffffff;
+      border: 1px solid #e6e6e6;
+      box-sizing: border-box;
+      border-radius: 1rem;
+      padding: 2rem 1.5rem 2rem;
+      text-align: left;
+      @media screen and (max-width: 991px){
+        width: 95%;
+        margin-top: 1rem;
+        align-items: center;
+      }
+      @media screen and (min-width: 991px) and (max-width: 1250px) {
+        width: 18.5rem;
+      }
+      &.shadow{
+        box-shadow: 0px 14px 30px rgba(204, 204, 204, 0.32);
+        @media screen and (min-width: 991px){
+          border: none;
+        }
+      }
+
+      &-header {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        line-height: 2.4375rem;
+        color: $g-black;
+        margin-left: 5px;
+        @media screen and (max-width: 991px) {
+          flex-direction: column;
+        }
+        &-icon {
+          width: 1.87rem;
+          height: 1.87rem;
+        }
+        div {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+
+        span {
+          margin-left: 0.81rem;
+          font-weight: 400;
+        }
+
+        &-badge {
+          
+          background-color: #FDB72E;
+          border-radius: 2.5rem;
+          padding: 0.62rem 1.12rem;
+          margin-left: auto!important;
+          font-style: normal;
+          width: 5.18rem;
+          line-height: 1.18rem;
+          font-size: 1rem;
+
+          &:after {
+            content:attr(data-text);
+            font-weight: 600;
+            color: #FFFFFF;
+          }
+
+          @media screen and (max-width: 991px) {
+           margin-top:1rem;
+          }
+        }
+      }
+
+      &-description {
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $g-text-color;
+        margin-top: 1.62rem;
+        font-weight:400;
+        @media screen and (max-width: 991px) {
+          text-align: center;
+        }
+      }
+
+      &-price {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.43rem;
+        color:$g-black;
+        margin-top: 2rem;
+        span {
+          font-weight: normal;
+          font-size: 1rem;
+          line-height: 2rem;
+          margin-left: 0.56rem;
+          color: $g-text-color;
+        }
+      }
+
+      &-properties {
+        margin-top: 2rem;
+        // margin-top:39.5px;
+        div {
+          display:flex;
+          font-weight: 500;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          color: $g-black;
+          +div {
+            margin-top: 2rem;
+          }
+          &:before {
+            content:url('icons/check.svg');
+            margin-right: 1rem;
+            height: 1.5rem;
+          }
+          &.passive {
+            &:before {
+              content:url('icons/close.svg');
+            }
+            color: #B1B8C9;;
+          }
+        }
+      }
+
+      &-button {
+        padding: 0.93rem 6.87rem;
+        width: 19.5rem;
+        height: 3.37rem;
+        background-color: #FFECF0;
+        border-radius: 8px;
+        margin: auto auto 0;
+        color: #EA4C89;
+        font-weight: 600;
+        border:none;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        cursor:pointer;
+        &:after {
+          content: attr(data-text);
+        }
+        &:hover {
+          background-color: #EA4C89;
+          color: #FFFFFF;
+          transition: 0.6s;
+        }
+
+        &.hover-change-text {
+          &:hover::after {
+            content: attr(data-hover);
+         }
+        }
+
+        &.white-button {
+          background-color:#fff;
+          &:hover {
+            border-color: #fff;
+            background-color:#E5E5E5;
+            color:#fff;
+          }
+        }
+
+        @media screen and (min-width: 991px) and (max-width: 1250px) {
+          padding:0;
+          width:95%;
+        }
+      }
+
+      &.blue-card {
+        background-color: #1769FF;
+        border:none;
+        .card-description {
+          opacity: 0.7;
+        }
+        .card-properties {
+          div {
+            &:before {
+              content:url('icons/check_white.svg');
+            }
+          }
+        }
+        *{
+          &:not(button) {
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}
